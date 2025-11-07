@@ -19,8 +19,8 @@ import java.util.Arrays;
  */
 public class SQLiteAESBenchmark {
 
-    private static final int WARMUP_ITERATIONS = 5;
-    private static final int BENCHMARK_ITERATIONS = 50;
+    private static final int WARMUP_ITERATIONS = 50;
+    private static final int BENCHMARK_ITERATIONS = 1000;
     private static final String SELECT_SQL = "SELECT 튜플 이름 FROM 테이블 이름";
     private static final int MAX_IMAGE_SIZE_BYTES = 1048576; // 1 MB
 
@@ -145,4 +145,5 @@ public class SQLiteAESBenchmark {
         System.out.printf("평균 메모리 사용량 변화 (데이터셋 한 바퀴 처리당): %.3f MB%n", (avgPerIterationMemoryIncrease / (1024.0 * 1024.0)));
         System.out.printf("벤치마크 전체 동안의 총 힙 메모리 사용량 증가: %.3f MB%n", (double) overallMemoryIncrease / (1024.0 * 1024.0));
     }
+
 }

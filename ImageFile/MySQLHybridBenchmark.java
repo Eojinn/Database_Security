@@ -17,8 +17,8 @@ import org.example.HybridCipher;
 
 public class MySQLHybridBenchmark {
 
-    private static final int WARMUP_ITERATIONS = 1;
-    private static final int BENCHMARK_ITERATIONS = 1;
+    private static final int WARMUP_ITERATIONS = 50;
+    private static final int BENCHMARK_ITERATIONS = 1000;
     private static final int MAX_IMAGE_SIZE_BYTES = 1048576; // 1MB
 
     public static void main(String[] args) {
@@ -169,3 +169,4 @@ public class MySQLHybridBenchmark {
         System.out.printf("벤치마크 전체 동안의 총 힙 메모리 사용량 증가: %.3f MB%n", (double) overallMemoryIncrease / (1024.0 * 1024.0));
     }
 }
+
